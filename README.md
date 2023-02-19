@@ -1,2 +1,2 @@
-# duraydesign
-On this projekt my goal was to build a responsive webdesigner page, using HTML, CSS and use as less javascript as possible, but make the page animated.
+Cube
+In this projrct I wanted zo do a rotateing 3d cube with a bouncing ball on top.
