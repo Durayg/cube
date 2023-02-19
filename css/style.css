@@ -6,13 +6,14 @@ body{
 	margin: 100px auto;
 	overflow: hidden;
 	background-image: linear-gradient(black, white);
+	background-repeat: no-repeat;
 }
 
 .wrapper{
 	margin: 25% auto;
-    background: rgba(255, 255, 255, 0.5);
-    width: 100px;
-    height: 100px;
+    	background: rgba(255, 255, 255, 0.5);
+   	width: 100px;
+    	height: 100px;
 	position: relative;
 	transform-style: preserve-3d;
 	transform: rotatex(80deg);
@@ -60,8 +61,8 @@ div{
 
 .side4{
 	top: -50px;
-    left: 0;
-    transform: rotateX(90deg) translatey(50px) rotate(180deg);
+    	left: 0;
+    	transform: rotateX(90deg) translatey(50px) rotate(180deg);
 	background-image: url('../img/box3.jpeg');
 }
 
