@@ -24,7 +24,7 @@ body{
 	transform: rotatex(80deg);
 }
 
-.cube-rotate{
+.rotate-cube{
 	animation-name: rotate;
 	animation-duration: 4s;
 	animation-iteration-count: infinite;
