@@ -11,40 +11,47 @@ body{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
+	padding: 10px;
 }
 
-.wrapper{
-	margin: 25% auto;
+.cube{
     	background: rgba(255, 255, 255, 0.5);
    	width: 100px;
     	height: 100px;
 	position: relative;
 	transform-style: preserve-3d;
 	transform: rotatex(80deg);
+}
+
+.cube-rotate{
 	animation-name: rotate;
-	animation-duration: 5s;
+	animation-duration: 4s;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
-	animation-delay: 2s;
 }
 @keyframes rotate{
 	0% {transform: rotatex(80deg)}
 	100% {transform: rotatex(80deg) rotate(360deg)}
 }
 
-body .wrapper:hover{
-	scale: 2;
+.cube::after{
+	content: "";
+	height: 100px;
+	width: 100px;
+	background-color: black;
+	display: block;
+	position: absolute;
+	transform: translateZ(-20px);
+	opacity: .6;
 }
 
-div{
+.sides{
 	height: 100px;
 	width: 100px;
 	position: absolute;
 	background-color: rgba(255, 255, 255, 0.5);
 	background-size: cover;
-}
-
-.side1{
 }
 
 .side2{
@@ -85,8 +92,27 @@ div{
 	background-image: radial-gradient(black 10%, white 38%);
 }
 	
+.side6-shadow{
+	animation-name: shadow;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+@keyframes shadow{
+	0%{background-image: radial-gradient(black 10%, white 38%);}
+	10%{background-image: radial-gradient(black 10%, white 31%);}
+	20%{background-image: radial-gradient(black 10%, white 24%);}
+	30%{background-image: radial-gradient(black 10%, white 17%);}
+	40%{background-image: radial-gradient(black 10%, white 10%);}
+	50%{background-image: radial-gradient(black 10%, white 3%);}
+	60%{background-image: radial-gradient(black 10%, white 10%);}
+	70%{background-image: radial-gradient(black 10%, white 17%);}
+	80%{background-image: radial-gradient(black 10%, white 24%);}
+	90%{background-image: radial-gradient(black 10%, white 31%);}
+	100%{background-image: radial-gradient(black 10%, white 38%);}
+}
 
-.ball{
+#ball{
 	border-radius: 50%;
 	transform: rotatex(90deg) translatey(25px);
 	position: absolute;
@@ -95,13 +121,15 @@ div{
 	height: 50px;
 	width: 50px;
 	background-image: linear-gradient(#8a8888 1%, white 99%);
-	animation-name: rotate2;
-	animation-duration: 2.5s;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
-	animation-delay: 2s;
 }
-@keyframes rotate2{
+
+.ball-bounce{
+	animation-name: ball-bounce;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: cubic-bezier(0,-0.18,.58,1.54);
+}
+@keyframes ball-bounce{
 	0% {transform: rotatex(90deg) translatey(25px)}
 	25% {transform: rotateX(90deg) translateY(100px) rotateY(-45deg)}
 	50% {transform: rotateX(90deg) translateY(25px) rotateY(-90deg)}
