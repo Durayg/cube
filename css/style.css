@@ -170,6 +170,6 @@ body{
 
 @media screen and (max-width: 800px){
 	.cube{
-		scale: 2;
+		scale: 3;
 	}
 }
