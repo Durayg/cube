@@ -54,14 +54,14 @@ body{
 	background-size: cover;
 }
 
-.side2{
+#side2{
 	top: 0;
 	left: -50px;
 	transform: rotateY(-90deg) translatex(50px) rotate(90deg);
 	background-image: url('../img/box1.jpeg');
 }
 
-.side3{
+#side3{
 	top: 0;
 	left: 50px;
 	transform: rotateY(90deg) translatex(-50px) rotate(-90deg);
@@ -70,21 +70,21 @@ body{
 	background-color: #f1efef;
 }
 
-.side4{
+#side4{
 	top: -50px;
     	left: 0;
     	transform: rotateX(90deg) translatey(50px) rotate(180deg);
 	background-image: url('../img/box3.jpeg');
 }
 
-.side5{
+#side5{
 	top: 50px;
 	left: 0;
 	transform: rotateX(-90deg) translateY(-50px);
 	background-image: url('../img/box4.png');
 }
 
-.side6{
+#side6{
 	top: 0;
 	left: 0;
 	transform: translatez(100px);
