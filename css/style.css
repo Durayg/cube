@@ -3,23 +3,22 @@
 }
 
 body{
-	margin: 100px auto;
+	margin: 0;
 	overflow: hidden;
 	background-image: linear-gradient(black, white);
 	background-repeat: no-repeat;
 	height: 100vh;
 	display: flex;
-	justify-content: center;
+	justify-content: end;
 	align-items: center;
 	flex-direction: column;
 	padding: 10px;
 }
 
 .cube{
-    	background: rgba(255, 255, 255, 0.5);
-   	width: 100px;
-    	height: 100px;
-	position: relative;
+    background: rgba(255, 255, 255, 0.5);
+    width: 300px;
+    height: 300px;
 	transform-style: preserve-3d;
 	transform: rotatex(80deg);
 }
@@ -37,8 +36,8 @@ body{
 
 .cube::after{
 	content: "";
-	height: 100px;
-	width: 100px;
+	height: 300px;
+	width: 300px;
 	background-color: black;
 	display: block;
 	position: absolute;
@@ -47,8 +46,8 @@ body{
 }
 
 .sides{
-	height: 100px;
-	width: 100px;
+	height: 300px;
+	width: 300px;
 	position: absolute;
 	background-color: rgba(255, 255, 255, 0.5);
 	background-size: cover;
@@ -56,42 +55,42 @@ body{
 
 #side2{
 	top: 0;
-	left: -50px;
-	transform: rotateY(-90deg) translatex(50px) rotate(90deg);
+	left: -150px;
+	transform: rotateY(-90deg) translatex(150px) rotate(90deg);
 	background-image: url('../img/box1.jpeg');
 }
 
 #side3{
 	top: 0;
-	left: 50px;
-	transform: rotateY(90deg) translatex(-50px) rotate(-90deg);
-	background-image: url('../img/dd.svg');
+	left: 150px;
+	transform: rotateY(90deg) translatex(-150px) rotate(-90deg);
+	background-image: url('../img/box4.png');
 	background-size: cover;
 	background-color: #f1efef;
 }
 
 #side4{
-	top: -50px;
-    	left: 0;
-    	transform: rotateX(90deg) translatey(50px) rotate(180deg);
+	top: -150px;
+    left: 0;
+    transform: rotateX(90deg) translatey(150px) rotate(180deg);
 	background-image: url('../img/box3.jpeg');
 }
 
 #side5{
-	top: 50px;
+	top: 150px;
 	left: 0;
-	transform: rotateX(-90deg) translateY(-50px);
-	background-image: url('../img/box4.png');
+	transform: rotateX(-90deg) translateY(-150px);
+	background-image: url('../img/dd.svg');
 }
 
 #side6{
 	top: 0;
 	left: 0;
-	transform: translatez(100px);
+	transform: translatez(300px);
 	transform-style: preserve-3d;
 	background-image: radial-gradient(black 10%, white 38%);
 }
-	
+
 .side6-shadow{
 	animation-name: shadow;
 	animation-duration: 1s;
@@ -114,12 +113,12 @@ body{
 
 #ball{
 	border-radius: 50%;
-	transform: rotatex(90deg) translatey(25px);
+	transform: rotatex(90deg) translatey(75px);
 	position: absolute;
-	top: 25px;
-	left: 25px;
-	height: 50px;
-	width: 50px;
+	top: 75px;
+	left: 75px;
+	height: 150px;
+	width: 150px;
 	background-image: linear-gradient(#8a8888 1%, white 99%);
 }
 
@@ -130,11 +129,11 @@ body{
 	animation-timing-function: cubic-bezier(0,-0.18,.58,1.54);
 }
 @keyframes ball-bounce{
-	0% {transform: rotatex(90deg) translatey(25px)}
-	25% {transform: rotateX(90deg) translateY(100px) rotateY(-45deg)}
-	50% {transform: rotateX(90deg) translateY(25px) rotateY(-90deg)}
-	75% {transform: rotateX(90deg) translateY(100px) rotateY(-135deg)}
-	100% {transform:  rotatex(90deg) translatey(25px) rotatey(-180deg)}
+	0% {transform: rotatex(90deg) translatey(75px)}
+	25% {transform: rotateX(90deg) translateY(175px) rotateY(-45deg)}
+	50% {transform: rotateX(90deg) translateY(75px) rotateY(-90deg)}
+	75% {transform: rotateX(90deg) translateY(175px) rotateY(-135deg)}
+	100% {transform:  rotatex(90deg) translatey(75px) rotatey(-180deg)}
 }
 
 .buttons{
@@ -164,12 +163,4 @@ body{
 
 #stop-btn{
 	background-image: url('../img/stop.png');
-}
-
-
-
-@media screen and (max-width: 800px){
-	.cube{
-		scale: 3;
-	}
 }
