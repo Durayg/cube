@@ -17,8 +17,8 @@ body{
 
 .cube{
     background: rgba(255, 255, 255, 0.5);
-    width: 300px;
-    height: 300px;
+    width: 450px;
+    height: 450px;
 	transform-style: preserve-3d;
 	transform: rotatex(80deg);
 }
@@ -36,8 +36,8 @@ body{
 
 .cube::after{
 	content: "";
-	height: 300px;
-	width: 300px;
+	height: 450px;
+	width: 450px;
 	background-color: black;
 	display: block;
 	position: absolute;
@@ -46,8 +46,8 @@ body{
 }
 
 .sides{
-	height: 300px;
-	width: 300px;
+	height: 450px;
+	width: 450px;
 	position: absolute;
 	background-color: rgba(255, 255, 255, 0.5);
 	background-size: cover;
@@ -55,38 +55,38 @@ body{
 
 #side2{
 	top: 0;
-	left: -150px;
-	transform: rotateY(-90deg) translatex(150px) rotate(90deg);
+	left: -225px;
+	transform: rotateY(-90deg) translatex(225px) rotate(90deg);
 	background-image: url('../img/box1.jpeg');
 }
 
 #side3{
 	top: 0;
-	left: 150px;
-	transform: rotateY(90deg) translatex(-150px) rotate(-90deg);
+	left: 225px;
+	transform: rotateY(90deg) translatex(-225px) rotate(-90deg);
 	background-image: url('../img/box4.png');
 	background-size: cover;
 	background-color: #f1efef;
 }
 
 #side4{
-	top: -150px;
+	top: -225px;
     left: 0;
-    transform: rotateX(90deg) translatey(150px) rotate(180deg);
+    transform: rotateX(90deg) translatey(225px) rotate(180deg);
 	background-image: url('../img/box3.jpeg');
 }
 
 #side5{
-	top: 150px;
+	top: 225px;
 	left: 0;
-	transform: rotateX(-90deg) translateY(-150px);
+	transform: rotateX(-90deg) translateY(-225px);
 	background-image: url('../img/dd.svg');
 }
 
 #side6{
 	top: 0;
 	left: 0;
-	transform: translatez(300px);
+	transform: translatez(450px);
 	transform-style: preserve-3d;
 	background-image: radial-gradient(black 10%, white 38%);
 }
@@ -143,13 +143,13 @@ body{
 
 
 .button{
-	height: 50px;
-	width: 100px;
+	height: 200px;
+	width: 300px;
 	cursor: pointer;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-color: white;
-	background-size: 40px;
+	background-size: contain;
 }
 
 .button:hover{
