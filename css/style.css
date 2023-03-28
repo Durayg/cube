@@ -1,31 +1,29 @@
 *{
 	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+}
+
+body{
+	overflow: hidden;
+	background-image: linear-gradient(black, white);
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+    align-items: center;
+	gap: 5rem;
+    padding-top: 10rem;
 }
 
 .wrapper{
-	margin: 0;
-	overflow: hidden;
-	background-image: linear-gradient(black, white);
-	background-repeat: no-repeat;
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	padding: 10px;
-}
-
-.cube{
     background: rgba(255, 255, 255, 0.5);
-    width: 500px;
-    height: 500px;
+    width: 100px;
+    height: 100px;
+	position: relative;
 	transform-style: preserve-3d;
 	transform: rotatex(80deg);
 }
 
-.rotate-cube{
+.rotate-wrapper{
 	animation-name: rotate;
 	animation-duration: 4s;
 	animation-iteration-count: infinite;
@@ -36,10 +34,10 @@
 	100% {transform: rotatex(80deg) rotate(360deg)}
 }
 
-.cube::after{
+.wrapper::after{
 	content: "";
-	height: 500px;
-	width: 500px;
+	height: 100px;
+	width: 100px;
 	background-color: black;
 	display: block;
 	position: absolute;
@@ -48,47 +46,47 @@
 }
 
 .sides{
-	height: 500px;
-	width: 500px;
+	height: 100px;
+	width: 100px;
 	position: absolute;
 	background-color: rgba(255, 255, 255, 0.5);
 	background-size: cover;
 }
 
-#side2{
+.side2{
 	top: 0;
-	left: -250px;
-	transform: rotateY(-90deg) translatex(250px) rotate(90deg);
+	left: -50px;
+	transform: rotateY(-90deg) translatex(50px) rotate(90deg);
 	background-image: url('../img/box1.jpeg');
 }
 
-#side3{
+.side3{
 	top: 0;
-	left: 250px;
-	transform: rotateY(90deg) translatex(-250px) rotate(-90deg);
+	left: 50px;
+	transform: rotateY(90deg) translatex(-50px) rotate(-90deg);
 	background-image: url('../img/box4.png');
 	background-size: cover;
 	background-color: #f1efef;
 }
 
-#side4{
-	top: -250px;
+.side4{
+	top: -50px;
     left: 0;
-    transform: rotateX(90deg) translatey(250px) rotate(180deg);
+    transform: rotateX(90deg) translatey(50px) rotate(180deg);
 	background-image: url('../img/box3.jpeg');
 }
 
-#side5{
-	top: 250px;
+.side5{
+	top: 50px;
 	left: 0;
-	transform: rotateX(-90deg) translateY(-250px);
+	transform: rotateX(-90deg) translateY(-50px);
 	background-image: url('../img/dd.svg');
 }
 
-#side6{
+.side6{
 	top: 0;
 	left: 0;
-	transform: translatez(500px);
+	transform: translatez(100px);
 	transform-style: preserve-3d;
 	background-image: radial-gradient(black 10%, white 38%);
 }
@@ -112,15 +110,16 @@
 	90%{background-image: radial-gradient(black 10%, white 31%);}
 	100%{background-image: radial-gradient(black 10%, white 38%);}
 }
+	
 
-#ball{
+.ball{
 	border-radius: 50%;
-	transform: rotatex(90deg) translatey(125px);
+	transform: rotatex(90deg) translatey(25px);
 	position: absolute;
-	top: 125px;
-	left: 125px;
-	height: 250px;
-	width: 250px;
+	top: 25px;
+	left: 25px;
+	height: 50px;
+	width: 50px;
 	background-image: linear-gradient(#8a8888 1%, white 99%);
 }
 
@@ -131,12 +130,13 @@
 	animation-timing-function: cubic-bezier(0,-0.18,.58,1.54);
 }
 @keyframes ball-bounce{
-	0% {transform: rotatex(90deg) translatey(125px)}
-	25% {transform: rotateX(90deg) translateY(225px) rotateY(-45deg)}
-	50% {transform: rotateX(90deg) translateY(125px) rotateY(-90deg)}
-	75% {transform: rotateX(90deg) translateY(225px) rotateY(-135deg)}
-	100% {transform:  rotatex(90deg) translatey(125px) rotatey(-180deg)}
+	0% {transform: rotatex(90deg) translatey(25px)}
+	25% {transform: rotateX(90deg) translateY(100px) rotateY(-45deg)}
+	50% {transform: rotateX(90deg) translateY(25px) rotateY(-90deg)}
+	75% {transform: rotateX(90deg) translateY(100px) rotateY(-135deg)}
+	100% {transform:  rotatex(90deg) translatey(25px) rotatey(-180deg)}
 }
+
 
 .buttons{
 	display: flex;
@@ -145,8 +145,8 @@
 
 
 .button{
-	height: 200px;
-	width: 300px;
+	height: 50px;
+	width: 100px;
 	cursor: pointer;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -165,6 +165,18 @@
 
 #stop-btn{
 	background-image: url('../img/stop.png');
+}
+
+@media screen and (min-width: 576px) {
+	body{
+		gap: 0;
+	}
+}
+
+@media screen and (min-width: 960px) {
+	body{
+		gap: 6rem;
+	}
 }
 
 
